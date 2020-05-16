@@ -1,0 +1,47 @@
+{
+    "debug": true,
+    "output": "console",
+    "database": {
+        "user": "",
+        "password": "",
+        "database": "",
+        "host": "",
+        "port": "",
+        "update_interval": 3600,
+        "tables": {
+            "apis": {
+                "twitter" : {
+                    "default": {
+                        "users": "apis_twitter_default_000_users",
+                        "tweets": "apis_twitter_default_001_tweets"
+                    }
+                }
+            }
+        }
+    },
+    "apis": {
+        "twitter": {
+            "default": {
+                "return_json": true,
+                "timeline_count": 10,
+                "keys": {
+                    "consumer_key": "",
+                    "consumer_secret": "",
+                    "access_token_key": "",
+                    "access_token_secret": "",
+                    "tweet_mode": "extended"
+                },
+                "sources": {
+                    "users": [
+                        "timbiernoth"
+                    ]
+                }
+            }
+        }
+    },
+    "messages": {
+        "database_object_not_found": "Database object not found!",
+        "database_connection_is_closed": "Database connection is closed!",
+        "error_while_connecting_to_database": "Error while connecting to database!"
+    }
+}
